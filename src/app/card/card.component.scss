@@ -1,0 +1,56 @@
+.card{
+    width: 300px;
+    margin: 20px;
+}
+
+.img{
+    display: flex;
+    width: 330px;
+    height: 100px;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.buttons{
+    display: flex;
+    width: 330px;
+    margin-left: 20px;
+    margin-top: 30px;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.plus{
+    display: flex;
+    justify-content: end;
+}
+
+.full{
+    width: 100%;
+    height: 100%;
+    align-content: center;
+}
+
+.container {
+    width: 60%;
+    min-height: 100%;
+    background-color: #35425D;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.title{
+    text-align: center;
+}
+
+.gastos{
+    margin-left: 20px;
+}
+
+.gasto{
+    display: flex;
+}
+.field{
+    width: 100%;
+}

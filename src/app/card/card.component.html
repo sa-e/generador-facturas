@@ -1,0 +1,57 @@
+<div class="full">
+  <div class="container">
+    <div>
+      <br>
+      <div class="img">
+        <img src="./../../assets/icono-factura.png">
+      </div>
+      <div class="title">
+        <h1 style="color:white">Generador de Facturas</h1>
+      </div>  
+      <br>
+      <mat-divider></mat-divider>
+      <br>
+      <mat-card class="card">        
+        <mat-form-field class="field">
+          <mat-label>Producto</mat-label>
+          <input matInput type="text"  [formControl]="inputDetalle">   
+        </mat-form-field>        
+        <mat-form-field class="field">
+          <mat-label>Precio por unidad ($)</mat-label>
+          <input matInput type="number"  [formControl]="inputGasto">   
+        </mat-form-field>
+        <mat-form-field class="field">
+          <mat-label>Cantidad</mat-label>
+          <input matInput type="number"  [formControl]="inputCantidad">   
+        </mat-form-field>
+        <br>
+        <div class="plus">
+          <button mat-stroked-button (click)="agregarGasto()" color="primary">
+            +
+          </button> 
+        </div> 
+      </mat-card>
+
+      <div class="gastos">
+        <div *ngFor="let gasto of this.gastos">
+            <div class="gasto">
+              <p style="color:white">${{(gasto.monto * gasto.cantidad)}} - x{{gasto.cantidad}} {{gasto.detalle}} (${{gasto.monto}})</p>
+              <button mat-icon-button (click)="borrarGasto(gasto)">
+                <mat-icon style="color:white; margin-top:10px">delete</mat-icon>
+              </button>
+            </div>
+        </div>  
+        <h3 *ngIf="this.total !== 0" style="color:white">Total: {{total}}$</h3>
+      </div>
+
+      <div class="buttons">
+        <button mat-raised-button (click)="limpiar()">
+          Limpiar
+        </button> 
+        <button mat-raised-button (click)="imprimir()">
+          Descargar Factura
+        </button> 
+      </div>
+    </div>
+  </div>
+</div>
