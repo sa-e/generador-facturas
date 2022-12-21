@@ -56,7 +56,7 @@ export class CardComponent implements OnInit {
 
   imprimir(){
     const img = new Image()
-    img.src = 'https://github.com/sa-e/generador-facturas/blob/gh-pages/assets/icono-factura.png'    
+    img.src = 'https://raw.githubusercontent.com/sa-e/generador-facturas/main/src/assets/icono-factura.png'    
     if(this.total !== 0){
     const date = new Date();
     const fecha = date.toLocaleString();
