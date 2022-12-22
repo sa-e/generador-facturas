@@ -11,20 +11,20 @@
       <br>
       <mat-divider></mat-divider>
       <br>
-      <mat-card class="card">        
-        <mat-form-field class="field">
+      <mat-card class="card">  
+        <br>      
+        <mat-form-field class="field" appearance="outline">
           <mat-label>Producto</mat-label>
           <input matInput type="text"  [formControl]="inputDetalle">   
         </mat-form-field>        
-        <mat-form-field class="field">
+        <mat-form-field class="field" appearance="outline">
           <mat-label>Precio por unidad ($)</mat-label>
           <input matInput type="number"  [formControl]="inputGasto">   
         </mat-form-field>
-        <mat-form-field class="field">
+        <mat-form-field class="field" appearance="outline">
           <mat-label>Cantidad</mat-label>
           <input matInput type="number"  [formControl]="inputCantidad">   
         </mat-form-field>
-        <br>
         <div class="plus">
           <button mat-stroked-button (click)="agregarGasto()" color="primary">
             +
@@ -37,7 +37,7 @@
             <div class="gasto">
               <p style="color:white">${{(gasto.monto * gasto.cantidad)}} - x{{gasto.cantidad}} {{gasto.detalle}} (${{gasto.monto}})</p>
               <button mat-icon-button (click)="borrarGasto(gasto)">
-                <mat-icon style="color:white; margin-top:10px">delete</mat-icon>
+                <mat-icon style="color:white">delete</mat-icon>
               </button>
             </div>
         </div>  

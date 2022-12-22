@@ -1,6 +1,6 @@
 .card{
-    width: 300px;
-    margin: 20px;
+    width: 310px;
+    margin-left: 20px;
 }
 
 .img{
@@ -13,7 +13,7 @@
 
 .buttons{
     display: flex;
-    width: 330px;
+    width: 310px;
     margin-left: 20px;
     margin-top: 30px;
     justify-content: space-between;
@@ -21,6 +21,8 @@
 }
 
 .plus{
+    margin-right: 20px;
+    margin-bottom: 20px;
     display: flex;
     justify-content: end;
 }
@@ -53,5 +55,6 @@
     display: flex;
 }
 .field{
-    width: 100%;
+    width: 270px;
+    margin-left: 20px;
 }
